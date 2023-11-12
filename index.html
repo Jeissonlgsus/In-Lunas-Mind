@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>In Luna's mind</title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./imagenes/Logo.png"/>
+    </head>
+    <body>
+        <section id="identificarUsuario">
+            <!-- Seccion para colocar el nombre de Usuario-->
+            <h1 class="tituloPagI">Hi, insert your name and password</h1>
+
+            <input type="text" id="nombreUsuario" name="name"/>
+            <label class="usuario" for="nombreUsuario">Name:</label>
+            <input type="password" id="passwordUsuario" name="password"/>
+            <label class="password" for="passwordUsuario">Password:</label>
+
+            <button id="botonUsuario">select</button>
+        </section>
+        <section id="seleccionarGuia">
+            <!-- Se usa el nombre del usuario para dar un saludo, y seleccionar guia-->
+            <h1 class="tituloPagII">Welcome <span id="spanNombreUsuario"></span> select a guide</h1>
+            <div id="contenedorTarjetas" class="tarjetas">
+
+            </div>
+            <button id="botonSeleccionarGuia">Select</button>
+        </section>
+<!----------------------Paginas 1 & 2----------------------->
+        <section id="presentacionGuia">
+            <div id="contenedorGuia" class="paginaGuias">
+
+            </div>
+            <button id="continuarGuia">Continue</button>
+        </section>
+        <section id="verMapa">
+            <h1 class="tituloPagIV"> let's travel together </h1>
+            <canvas id="mapa"></canvas>
+            <div class="controles">
+                <div class="controlSup">
+                    <div class="botonLU"></div>
+                    <button id="botonArriba" onmouseup="detenerMovimiento()" onmousedown="moverArriba()" ontouchstart="moverArriba()" ontouchend="detenerMovimiento()" oncontextmenu="return false">⬆</button>
+                    <div class="botonRU"></div>
+                </div>
+                <div class="controlesInf">
+                    <button id="botonIzquierda" onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" ontouchstart="moverIzquierda()" ontouchend="detenerMovimiento()" oncontextmenu="return false">⬅</button>
+                    <button id="botonAbajo" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()" ontouchstart="moverAbajo()" ontouchend="detenerMovimiento()" oncontextmenu="return false">⬇</button>
+                    <button id="botonDerecha" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()" ontouchstart="moverDerecha()" ontouchend="detenerMovimiento()" oncontextmenu="return false">➡</button>
+                </div>
+            </div>
+        </section>
+        <section id="bienvenida">
+            <div id="contenedorBienvenida" class="paginasBienvenida">
+
+            </div>
+            <button id="continuarBienvenida">Continue</button>
+        </section>
+        <section id="presentacionPersonaje">
+            <!-- Se colocan obras generadas por el personaje y material que ayude con la ansiedad-->
+            <div id="contenedorPersonajes" class="paginasPersonaje">
+                
+            </div>
+            <button id="continuarFrase">Continue</button>
+        </section>
+        <section id="frasePersonaje">
+            <div id="contenedorFrase" class="paginaFrase">
+
+            </div>
+            <button id="botonReiniciar">Reload</button>
+        </section>
+        <script src="./js/java.js"></script>
+    </body>
+</html>
